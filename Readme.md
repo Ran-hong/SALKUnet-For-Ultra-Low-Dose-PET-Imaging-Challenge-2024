@@ -2,7 +2,7 @@
 
 **S**UV **A**dapter **L**arge **K**ernel **U-Net** (**SALKUnet**) is a Unet based model which composed of a large kernel convolution and an SUV adapter for  [Ultra-Low Dose PET Imaging Challenge 2024]([Ultra-Low Dose PET Imaging Challenge 2024 | UDPET Challenge 2024 (udpet-challenge-2024.github.io)](https://udpet-challenge-2024.github.io/))  to reconstruct full-dose PET from low-dose PET include DRF100, 50, 20, 10, 4.
 
-![SALKUnet](asset\SALKUNet.drawio.png)
+![SALKUnet](asset/SALKUNet.drawio.png)
 
 # Results
 
