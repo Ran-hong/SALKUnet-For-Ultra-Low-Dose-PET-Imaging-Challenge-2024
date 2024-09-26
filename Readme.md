@@ -20,9 +20,7 @@ For train and evaluate DRF100:
 
 ```
 python main.py --configs_name="./configs/SALKUnetConfig_D100.py" --workdir="your training path"
-'''
 
-'''
 python main.py --configs_name="./configs/SALKUnetConfig_D100_eval.py" --eval_dir="your evaluate path" --eval_path="your ckpt"
 ```
 
@@ -30,9 +28,7 @@ For train and evaluate DRF50:
 
 ```
 python main.py --configs_name="./configs/SALKUnetConfig_D50.py" --workdir="your training path"
-'''
 
-'''
 python main.py --configs_name="./configs/SALKUnetConfig_D50_eval.py" --eval_dir="your evaluate path" --eval_path="your ckpt"
 ```
 
@@ -40,9 +36,7 @@ For train and evaluate DRF20:
 
 ```
 python main.py --configs_name="./configs/SALKUnetConfig_D20.py" --workdir="your training path"
-'''
 
-'''
 python main.py --configs_name="./configs/SALKUnetConfig_D20_eval.py" --eval_dir="your evaluate path" --eval_path="your ckpt"
 ```
 
@@ -50,9 +44,7 @@ For train and evaluate DRF10:
 
 ```
 python main.py --configs_name="./configs/SALKUnetConfig_D10.py" --workdir="your training path"
-'''
 
-'''
 python main.py --configs_name="./configs/SALKUnetConfig_D10_eval.py" --eval_dir="your evaluate path" --eval_path="your ckpt"
 ```
 
@@ -60,9 +52,7 @@ For train and evaluate DRF4:
 
 ```
 python main.py --configs_name="./configs/SALKUnetConfig_D4.py" --workdir="your training path"
-'''
 
-'''
 python main.py --configs_name="./configs/SALKUnetConfig_D4_eval.py" --eval_dir="your evaluate path" --eval_path="your ckpt"
 ```
 
