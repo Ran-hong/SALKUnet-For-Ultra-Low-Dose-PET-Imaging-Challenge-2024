@@ -12,18 +12,22 @@ from configs import Unet3dDeepConfig
 from configs import Unet3dDeepConfig_eval
 from configs import Unet3dDeepConfig_test
 
-from configs import Unet3dAKABConfig_D50
-from configs import Unet3dAKABConfig_D50_test
-from configs import Unet3dAKABConfig_D20
-from configs import Unet3dAKABConfig_D20_test
-from configs import Unet3dAKABConfig_D10
-from configs import Unet3dAKABConfig_D10_test
-from configs import Unet3dAKABConfig_D4
-from configs import Unet3dAKABConfig_D4_test
-from configs import Unet3dAKABConfig_D100
-from configs import Unet3dAKABConfig_D100_eval
-from configs import Unet3dAKABConfig_D100_test
-from configs import Unet3dAKABConfig_RLD_test
+from configs import SALKUnetConfig_D50
+from configs import SALKUnetConfig_D50_test
+from configs import SALKUnetConfig_D50_eval
+from configs import SALKUnetConfig_D20
+from configs import SALKUnetConfig_D20_test
+from configs import SALKUnetConfig_D20_eval
+from configs import SALKUnetConfig_D10
+from configs import SALKUnetConfig_D10_test
+from configs import SALKUnetConfig_D10_eval
+from configs import SALKUnetConfig_D4
+from configs import SALKUnetConfig_D4_test
+from configs import SALKUnetConfig_D4_eval
+from configs import SALKUnetConfig_D100
+from configs import SALKUnetConfig_D100_eval
+from configs import SALKUnetConfig_D100_test
+from configs import SALKUnetConfig_RLD_test
 
 
 
@@ -43,11 +47,11 @@ def main(args, config):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
 
-    parser.add_argument("--configs_name", type=str, default="Unet3dAKABConfigRLD_test")
+    parser.add_argument("--configs_name", type=str, default="SALKUnetConfig_D4_eval")
     
-    parser.add_argument("--workdir", type=str, default="/home/uPET/FinalCode/SALKUnet_asset/_exp_FinRLD")
-    parser.add_argument("--eval_dir", type=str, default="/home/uPET/FinalCode/SALKUnet_asset/_exp_FinRLD_eval")
-    parser.add_argument("--eval_path", type=str, default="/home/uPET/FinalCode/SALKUnet_asset/_exp_FinD100/checkpoints/checkpoint_24.pth")
+    parser.add_argument("--workdir", type=str, default="/home/uPET/FinalCode/SALKUnet_asset/_exp_FinD4")
+    parser.add_argument("--eval_dir", type=str, default="/home/uPET/FinalCode/SALKUnet_asset/_exp_FinD4_eval")
+    parser.add_argument("--eval_path", type=str, default="/home/uPET/FinalCode/SALKUnet_asset/_exp_FinD4/checkpoints/checkpoint_24.pth")
     parser.add_argument("--test_dir", type=str, default="/home/uPET/FinalCode/SALKUnet_asset/_exp_FinRLD_test")
     parser.add_argument("--test_path", type=str, default="/home/uPET/FinalCode/SALKUnet_asset/_exp_FinD100/checkpoints/checkpoint_24.pth")
 
@@ -72,30 +76,38 @@ if __name__ == "__main__":
     elif args.configs_name == "Unet3dDeepConfig_test":
         config = Unet3dDeepConfig_test.getConfigs()
 
-    elif args.configs_name == "Unet3dAKABConfig":
-        config = Unet3dAKABConfig_D100.getConfigs()
-    elif args.configs_name == "Unet3dAKABConfigD100_eval":
-        config = Unet3dAKABConfig_D100_eval.getConfigs()
-    elif args.configs_name == "Unet3dAKABConfigD100_test":
-        config = Unet3dAKABConfig_D100_test.getConfigs()
-    elif args.configs_name == "Unet3dAKABConfigD50":
-        config = Unet3dAKABConfig_D50.getConfigs()
-    elif args.configs_name == "Unet3dAKABConfigD50_test":
-        config = Unet3dAKABConfig_D50_test.getConfigs()
-    elif args.configs_name == "Unet3dAKABConfigD20":
-        config = Unet3dAKABConfig_D20.getConfigs()
-    elif args.configs_name == "Unet3dAKABConfigD20_test":
-        config = Unet3dAKABConfig_D20_test.getConfigs()
-    elif args.configs_name == "Unet3dAKABConfigD10":
-        config = Unet3dAKABConfig_D10.getConfigs()
-    elif args.configs_name == "Unet3dAKABConfigD10_test":
-        config = Unet3dAKABConfig_D10_test.getConfigs()
-    elif args.configs_name == "Unet3dAKABConfigD4":
-        config = Unet3dAKABConfig_D4.getConfigs()
-    elif args.configs_name == "Unet3dAKABConfigD4_test":
-        config = Unet3dAKABConfig_D4_test.getConfigs()
-    elif args.configs_name == "Unet3dAKABConfigRLD_test":
-        config = Unet3dAKABConfig_RLD_test.getConfigs()
+    elif args.configs_name == "SALKUnetConfig_D100":
+        config = SALKUnetConfig_D100.getConfigs()
+    elif args.configs_name == "SALKUnetConfig_D100_eval":
+        config = SALKUnetConfig_D100_eval.getConfigs()
+    elif args.configs_name == "SALKUnetConfig_D100_test":
+        config = SALKUnetConfig_D100_test.getConfigs()
+    elif args.configs_name == "SALKUnetConfig_D50":
+        config = SALKUnetConfig_D50.getConfigs()
+    elif args.configs_name == "SALKUnetConfig_D50_test":
+        config = SALKUnetConfig_D50_test.getConfigs()
+    elif args.configs_name == "SALKUnetConfig_D50_eval":
+        config = SALKUnetConfig_D50_eval.getConfigs()
+    elif args.configs_name == "SALKUnetConfig_D20":
+        config = SALKUnetConfig_D20.getConfigs()
+    elif args.configs_name == "SALKUnetConfig_D20_test":
+        config = SALKUnetConfig_D20_test.getConfigs()
+    elif args.configs_name == "SALKUnetConfig_D20_eval":
+        config = SALKUnetConfig_D50_eval.getConfigs()
+    elif args.configs_name == "SALKUnetConfig_D10":
+        config = SALKUnetConfig_D10.getConfigs()
+    elif args.configs_name == "SALKUnetConfig_D10_test":
+        config = SALKUnetConfig_D10_test.getConfigs()
+    elif args.configs_name == "SALKUnetConfig_D10_eval":
+        config = SALKUnetConfig_D10_eval.getConfigs()
+    elif args.configs_name == "SALKUnetConfig_D4":
+        config = SALKUnetConfig_D4.getConfigs()
+    elif args.configs_name == "SALKUnetConfig_D4_test":
+        config = SALKUnetConfig_D4_test.getConfigs()
+    elif args.configs_name == "SALKUnetConfig_D4_eval":
+        config = SALKUnetConfig_D4_eval.getConfigs()
+    elif args.configs_name == "SALKUnetConfig_RLD_test":
+        config = SALKUnetConfig_RLD_test.getConfigs()
 
     
     else:
